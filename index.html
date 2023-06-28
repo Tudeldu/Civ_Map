@@ -11,15 +11,20 @@
             document.getElementsByTagName("iframe")[0].src = "https://www.google.com/maps/embed/v1/place?q=" + lat + "," + long + "&maptype=satellite&zoom=12&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
         }
         // Function that changes the coordinates of the map and the pin to the ones of the wonder, when a wonder is clicked but with closer zoom
-        function changeMapWonder(lat, long){
+        function changeMapWonder(lat, long) {
             document.getElementsByTagName("iframe")[0].src = "https://www.google.com/maps/embed/v1/place?q=" + lat + "," + long + "&maptype=satellite&zoom=15&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
+        }
+        function changeMapName(name) {
+            document.getElementsByTagName("iframe")[0].src = "https://www.google.com/maps/embed/v1/place?q=" + name + "&maptype=satellite&zoom=12&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
         }
 
     </script>
 </head>
 
 <body style="background-color:rgb(34, 34, 34);">
-    <iframe style="height: 600px;width:100%;border:0;" frameborder="0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Civilization_VI.svg/1200px-Civilization_VI.svg.png"></iframe>    <style>
+    <iframe style="height: 600px;width:100%;border:0;" frameborder="0"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Civilization_VI.svg/1200px-Civilization_VI.svg.png"></iframe>
+    <style>
         /* Style for iframe*/
         iframe {
             width: 100%;
@@ -100,7 +105,8 @@
     <div>
         <h2>Built Wonders</h2>
         <button onclick="changeMapWonder(37.17800894963899, -3.588118976680944)">Alhambra</button>
-        <button onclick="changeMapWonder(-84.99998969556408, 0.0007638571948332335)">Amundsen-Scott Research Station</button>
+        <button onclick="changeMapWonder(-84.99998969556408, 0.0007638571948332335)">Amundsen-Scott Research
+            Station</button>
         <button onclick="changeMapWonder(13.412750255003969, 103.8669784198946)">Angkor Wat</button>
         <button onclick="changeMapWonder(29.935397414591286, 52.88937668472145)">Apadana</button>
         <button onclick="changeMapWonder(51.500876413111925, -0.1245226652777242)">Big Ben</button>
@@ -152,6 +158,71 @@
         <button onclick="changeMapWonder(38.6917511232027, -9.215870005127082)">Torre de Belém</button>
         <button onclick="changeMapWonder(16.775348280550666, -3.0045673280324747)">University of Sankore</button>
         <button onclick="changeMapWonder(45.434874179637276, 12.349890844316338)">Venetian Arsenal</button>
+    </div>
+    <div>
+        <h2>City states</h2>
+        <!-- Names of all City States:
+            Akkad Amsterdam Anshan Antananarivo Antioch Armagh Auckland Ayutthaya Babylon Bandar+Brunei Bologna Brussels Buenos+Aires Caguana Cahokia Cardiff Carthage Chinguetti Fez Geneva Granada Hattusa Hong+Kong Hunza Jakarta Jerusalem Johannesburg Kabul Kandy Kumasi La+Venta Lahore Lisbon Mexico+City Mitla Mogadishu Mohenjo-Daro Muscat Nalanda Nan+Madol Nazca Ngazargamu Palenque Preslav Rapa+Nui Samarkand Seoul Singapore Stockholm Taruga Toronto Valletta Vatican+City Venice Vilnius Wolin Yerevan Zanzibar
+        -->
+        <button onclick="changeMap(33.29808411989662, 44.10993879847643)">Akkad</button>
+        <button onclick="changeMapName('Amsterdam')">Amsterdam</button>
+        <button onclick="changeMapName('Anshan')">Anshan</button>
+        <button onclick="changeMapName('Antananarivo')">Antananarivo</button>
+        <button onclick="changeMapName('Antioch')">Antioch</button>
+        <button onclick="changeMapName('Armagh')">Armagh</button>
+        <button onclick="changeMapName('Auckland')">Auckland</button>
+        <button onclick="changeMapName('Ayutthaya,Thailand')">Ayutthaya</button>
+        <button onclick="changeMapName('Babylon,Iraq')">Babylon</button>
+        <button onclick="changeMapName('Bandar+Brunei')">Bandar Brunei</button>
+        <button onclick="changeMapName('Bologna')">Bologna</button>
+        <button onclick="changeMapName('Brussels')">Brussels</button>
+        <button onclick="changeMapName('Buenos+Aires')">Buenos Aires</button>
+        <button onclick="changeMapName('Caguana')">Caguana</button>
+        <button onclick="changeMapName('Cahokia')">Cahokia</button>
+        <button onclick="changeMapName('Cardiff')">Cardiff</button>
+        <button onclick="changeMapName('Carthage')">Carthage</button>
+        <button onclick="changeMapName('Chinguetti')">Chinguetti</button>
+        <button onclick="changeMapName('Fez,Morocco')">Fez</button>
+        <button onclick="changeMapName('Geneva')">Geneva</button>
+        <button onclick="changeMapName('Granada')">Granada</button>
+        <button onclick="changeMapName('Hattusha')">Hattusa</button>
+        <button onclick="changeMapName('Hong+Kong')">Hong Kong</button>
+        <button onclick="changeMapName('Tunja')">Hunza</button>
+        <button onclick="changeMapName('Jakarta')">Jakarta</button>
+        <button onclick="changeMapName('Jerusalem')">Jerusalem</button>
+        <button onclick="changeMapName('Johannesburg')">Johannesburg</button>
+        <button onclick="changeMapName('Kabul')">Kabul</button>
+        <button onclick="changeMapName('Kandy')">Kandy</button>
+        <button onclick="changeMapName('Kumasi')">Kumasi</button>
+        <button onclick="changeMapName('Parque-Museo+La+Venta')">La Venta</button>
+        <button onclick="changeMapName('Lahore')">Lahore</button>
+        <button onclick="changeMapName('Lisbon')">Lisbon</button>
+        <button onclick="changeMapName('Mexico+City')">Mexico City</button>
+        <button onclick="changeMapName('Mitla')">Mitla</button>
+        <button onclick="changeMapName('Mogadishu')">Mogadishu</button>
+        <button onclick="changeMapName('Mohenjo-Daro')">Mohenjo-Daro</button>
+        <button onclick="changeMapName('Muscat')">Muscat</button>
+        <button onclick="changeMapName('Nalanda')">Nalanda</button>
+        <button onclick="changeMapName('Nan+Madol')">Nan Madol</button>
+        <button onclick="changeMapName('Nazca')">Nazca</button>
+        <button onclick="changeMapName('Gidimbari')">Ngazargamu</button>
+        <button onclick="changeMapName('Palenque')">Palenque</button>
+        <button onclick="changeMapName('Preslav')">Preslav</button>
+        <button onclick="changeMapName('Rapa+Nui')">Rapa Nui</button>
+        <button onclick="changeMapName('Samarkand')">Samarkand</button>
+        <button onclick="changeMapName('Seoul')">Seoul</button>
+        <button onclick="changeMapName('Singapore')">Singapore</button>
+        <button onclick="changeMapName('Stockholm')">Stockholm</button>
+        <button onclick="changeMapName('Taruga')">Taruga</button>
+        <button onclick="changeMapName('Toronto')">Toronto</button>
+        <button onclick="changeMapName('Valletta')">Valletta</button>
+        <button onclick="changeMapName('Vatican+City')">Vatican City</button>
+        <button onclick="changeMapName('Venice')">Venice</button>
+        <button onclick="changeMapName('Vilnius')">Vilnius</button>
+        <button onclick="changeMapName('Wolin')">Wolin</button>
+        <button onclick="changeMapName('Yerevan')">Yerevan</button>
+        <button onclick="changeMapName('Zanzibar,Tansania')">Zanzibar</button>
+
     </div>
 </body>
 
