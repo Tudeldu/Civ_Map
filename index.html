@@ -46,7 +46,7 @@
                     buttons[i].style.padding = "10px";
                 }
                 isUgly = true;
-            }else{
+            } else {
                 //reverts all changes from above
                 document.body.style.fontFamily = "Arial";
                 document.body.style.fontSize = "medium";
@@ -96,6 +96,21 @@
             padding: 3px;
         }
 
+
+        .row3 {
+            display: flex;
+            padding-bottom: 100px;
+        }
+
+        .column3 {
+            flex: 33%;
+            padding: 3px;
+        }
+
+        .column31 {
+            flex: 50%;
+            padding: 3px;
+        }
 
         /* Style for iframe*/
         iframe {
@@ -488,47 +503,70 @@
         <button
             onclick="changeMapName('Zanzibar,Tansania');changeWiki('https://en.wikipedia.org/wiki/Zanzibar_City')">Zanzibar</button>
     </div>
-    <div>
-        <h2>Unique Buildings</h2>
+    <div class="row3">
+        
         <!--
             Basilikoi+Paides Palgum Marae Ordu Tlachtli	Sukiennice Prasat Stave+Church Madrasa	Navigation+School Queen's+Bibliotheque Grand+Bazaar Tsikhe Electronics+Factory Thermal+Bath Film+Studio
         -->
-        <button
-            onclick="changeMapName('Rotowhio+Marae');changeWiki('https://en.wikipedia.org/wiki/Marae')">Marae</button>
-        <button
-            onclick="changeMapName('mongolian+museum');changeWiki('https://en.wikipedia.org/wiki/Orda_(organization)')">Ordu</button>
-        <button
-            onclick="changeMapName('Tlachtli');changeWiki('https://en.wikipedia.org/wiki/Mesoamerican_ballgame')">Tlachtli</button>
-        <button
-            onclick="changeMapName('Sukiennice');changeWiki('https://en.wikipedia.org/wiki/Cloth_hall')">Sukiennice</button>
-        <button
-            onclick="changeMapName('khmer+temple+thailand');changeWiki('https://en.wikipedia.org/wiki/Prasat')">Prasat</button>
-        <button
-            onclick="changeMapName('Stave+Church+Borgund');changeWiki('https://en.wikipedia.org/wiki/Stave_church')">Stave
-            Church</button>
-        <button
-            onclick="changeMapName('Madrasa+samarkand');changeWiki('https://en.wikipedia.org/wiki/Madrasa')">Madrasa</button>
-        <button
-            onclick="changeMapName('Escola+Superior+Náutica+Infante+Dom+Henrique');changeWiki('https://en.wikipedia.org/wiki/Escola_Superior_N%C3%A1utica_Infante_Dom_Henrique')">Navigation
-            School</button>
-        <button
-            onclick="changeMapName('National+Library+Sweden');changeWiki('https://en.wikipedia.org/wiki/National_Library_of_Sweden')">Queen's
-            Bibliotheque</button>
-        <button
-            onclick="changeMapName('Grand+Bazaar');changeWiki('https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul')">Grand
-            Bazaar</button>
-        <button
-            onclick="changeMapName('Ananuri');changeWiki('https://en.wikipedia.org/wiki/List_of_fortifications_in_Georgia_(country)')">Tsikhe</button>
-        <button
-            onclick="changeMapName('Panasoni+Smart+Factory+Solutions+Kofu+Sight');changeWiki('https://en.wikipedia.org/wiki/Electronics_industry_in_Japan')">Electronics
-            Factory</button>
-        <button
-            onclick="changeMapName('Budapest,Thermal+Beer+Spa,Állatkerti+körút,Hungary');changeWiki('https://en.wikipedia.org/wiki/Spas_in_Budapest')">Thermal
-            Bath</button>
-        <button
-            onclick="changeMapName('Sony+Pictures+Studios');changeWiki('https://en.wikipedia.org/wiki/Film_studio')">Film
-            Studio</button>
-
+        <div class="column3">
+            <h2>Unique Civ Buildings</h2>
+            <button onclick="changeMapName('Rotowhio+Marae');changeWiki('https://en.wikipedia.org/wiki/Marae')">Marae</button>
+            <button onclick="changeMapName('mongolian+museum');changeWiki('https://en.wikipedia.org/wiki/Orda_(organization)')">Ordu</button>
+            <button onclick="changeMapName('Tlachtli');changeWiki('https://en.wikipedia.org/wiki/Mesoamerican_ballgame')">Tlachtli</button>
+            <button onclick="changeMapName('Sukiennice');changeWiki('https://en.wikipedia.org/wiki/Cloth_hall')">Sukiennice</button>
+            <button onclick="changeMapName('khmer+temple+thailand');changeWiki('https://en.wikipedia.org/wiki/Prasat')">Prasat</button>
+            <button onclick="changeMapName('Stave+Church+Borgund');changeWiki('https://en.wikipedia.org/wiki/Stave_church')">Stave Church</button>
+            <button onclick="changeMapName('Madrasa+samarkand');changeWiki('https://en.wikipedia.org/wiki/Madrasa')">Madrasa</button>
+            <button onclick="changeMapName('Escola+Superior+Náutica+Infante+Dom+Henrique');changeWiki('https://en.wikipedia.org/wiki/Escola_Superior_N%C3%A1utica_Infante_Dom_Henrique')">Navigation School</button>
+            <button onclick="changeMapName('National+Library+Sweden');changeWiki('https://en.wikipedia.org/wiki/National_Library_of_Sweden')">Queen's Bibliotheque</button>
+            <button onclick="changeMapName('Grand+Bazaar');changeWiki('https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul')">Grand Bazaar</button>
+            <button onclick="changeMapName('Ananuri');changeWiki('https://en.wikipedia.org/wiki/List_of_fortifications_in_Georgia_(country)')">Tsikhe</button>
+            <button onclick="changeMapName('Panasoni+Smart+Factory+Solutions+Kofu+Sight');changeWiki('https://en.wikipedia.org/wiki/Electronics_industry_in_Japan')">Electronics Factory</button>
+            <button onclick="changeMapName('Budapest,Thermal+Beer+Spa,Állatkerti+körút,Hungary');changeWiki('https://en.wikipedia.org/wiki/Spas_in_Budapest')">Thermal Bath</button>
+            <button onclick="changeMapName('Sony+Pictures+Studios');changeWiki('https://en.wikipedia.org/wiki/Film_studio')">Film Studio</button>
+        </div>
+        <div class="column31">
+            <h2>Unique Civ imrovements</h2>
+            <!-- Château Chemamull Feitoria Golf+Course Great+Wall Hacienda Ice+Hockey+Rink Kampung Kurgan Mekewap Mission Nubian+Pyramid Open-Air+Museum Outback+Station Pā Pairidaeza Polder Qhapaq+Ñan Rock-Hewn+Church Roman+Fort Sphinx Stepwell Terrace+Farm Ziggurat -->
+            <button onclick="changeMapName('Château+de+Chambord');changeWiki('https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Chambord')">Château</button>
+            <button onclick="changeMapName('Bandera+361,Santiago');changeWiki('https://en.wikipedia.org/wiki/Chemamull')">Chemamull</button>
+            <button onclick="changeMapName('Feitoria');changeWiki('https://en.wikipedia.org/wiki/Feitoria')">Feitoria</button>
+            <button onclick="changeMapName('Golf+Course,scottland');changeWiki('https://en.wikipedia.org/wiki/Golf_course')">Golf Course</button>
+            <button onclick="changeMapName('Great+Wall+of+China');changeWiki('https://en.wikipedia.org/wiki/Great_Wall_of_China')">Great Wall</button>
+            <button onclick="changeMapName('Hacienda,spain');changeWiki('https://en.wikipedia.org/wiki/Hacienda')">Hacienda</button>
+            <button onclick="changeMapName('Ice+Hockey+Rink,canada');changeWiki('https://en.wikipedia.org/wiki/Ice_hockey')">Ice Hockey Rink</button>
+            <button onclick="changeMapName('Kampong,indonesia');changeWiki('https://en.wikipedia.org/wiki/Kampong')">Kampung</button>
+            <button onclick="changeMapName('Kurgan');changeWiki('https://en.wikipedia.org/wiki/Kurgan')">Kurgan</button>
+            <button onclick="changeMapName('America');changeWiki('https://en.wikipedia.org/wiki/Wigwam')">Mekewap</button>
+            <button onclick="changeMapName('Mission');changeWiki('https://en.wikipedia.org/wiki/Mission_(station)')">Mission</button>
+            <button onclick="changeMapName('Nubian+Pyramid');changeWiki('https://en.wikipedia.org/wiki/Nubian_pyramids')">Nubian Pyramid</button>
+            <button onclick="changeMapName('Open-Air+Museum,sweden');changeWiki('https://en.wikipedia.org/wiki/Open-air_museum')">Open-Air Museum</button>
+            <button onclick="changeMapName('Outback+Station,australia');changeWiki('https://en.wikipedia.org/wiki/Outback')">Outback Station</button>
+            <button onclick="changeMapName('Maungawhau,Mount Eden');changeWiki('https://en.wikipedia.org/wiki/P%C4%81')">Pā</button>
+            <button onclick="changeMapName('Shalimar+Bagh,Srinagar');changeWiki('https://en.wikipedia.org/wiki/Paradise_garden')">Pairidaeza</button>
+            <button onclick="changeMapName('Polder,netherlands');changeWiki('https://en.wikipedia.org/wiki/Polder')">Polder</button>
+            <button onclick="changeMapName('Qhapaq+Ñan');changeWiki('https://en.wikipedia.org/wiki/Qhapaq_%C3%91an')">Qhapaq Ñan</button>
+            <button onclick="changeMapName('Church+of+Saint+George,Ethiopia');changeWiki('https://en.wikipedia.org/wiki/Rock-Hewn_Churches,_Lalibela')">Rock-Hewn Church</button>
+            <button onclick="changeMapName('Roman+Fort');changeWiki('https://en.wikipedia.org/wiki/Roman_fort')">Roman Fort</button>
+            <button onclick="changeMapName('Sphinx,egypt');changeWiki('https://en.wikipedia.org/wiki/Sphinx')">Sphinx</button>
+            <button onclick="changeMapName('Rani+ki+vav');changeWiki('https://en.wikipedia.org/wiki/Stepwell')">Stepwell</button>
+            <button onclick="changeMapName('Terrace+Farm,indonesia');changeWiki('https://en.wikipedia.org/wiki/Terrace_(agriculture)')">Terrace Farm</button>
+            <button onclick="changeMapName('Ziggurat+of+Dur+Untash');changeWiki('https://en.wikipedia.org/wiki/Ziggurat')">Ziggurat</button>
+        </div>
+        <div class="column3">
+            <h2>Unique City State Buildings</h2>
+            <!-- Alcázar Batey Mounds Colossal+Heads Mahavihara Moai Monastery Nazca+Line Trading+Dome -->
+            <button onclick="changeMapName('Alcázar+of+Seville');changeWiki('https://en.wikipedia.org/wiki/Alc%C3%A1zar_of_Seville')">Alcázar</button>
+            <button onclick="changeMapName('Batey');changeWiki('https://en.wikipedia.org/wiki/Batey_(game)')">Batey</button>
+            <button onclick="changeMapName('Cahokia+mounds');changeWiki('https://en.wikipedia.org/wiki/Monks_Mound')">Cahokia Mounds</button>
+            <button onclick="changeMapName('Olmec+Heads');changeWiki('https://en.wikipedia.org/wiki/Olmec_colossal_heads')">Colossal Heads</button>
+            <button onclick="changeMapName('Mahavihara+of+Nalanda');changeWiki('https://en.wikipedia.org/wiki/Nalanda')">Mahavihara</button>
+            <button onclick="changeMapName('Easter+Island');changeWiki('https://en.wikipedia.org/wiki/Moai')">Moai</button>
+            <button onclick="changeMapName('Monastery+of+the+Horezu+Monastery');changeWiki('https://en.wikipedia.org/wiki/Horezu_Monastery')">Monastery</button>
+            <button onclick="changeMapName('Nazca+Lines');changeWiki('https://en.wikipedia.org/wiki/Nazca_Lines')">Nazca Lines</button>
+            <button onclick="changeMapName('Trading+Dome');changeWiki('https://en.wikipedia.org/wiki/Chorsu_(Samarkand)')">Trading Dome</button>
+        </div>
+        
     </div>
     <div>
         <button onclick="changeFont()" style="font-family: Comic Sans MS;" class="FontButton">Comic Sans</button>
