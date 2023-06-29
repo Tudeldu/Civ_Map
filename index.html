@@ -23,12 +23,21 @@
             WikiFrame = document.getElementsByTagName("iframe")[1];
             WikiFrame.src = URL;
         }
+
+        //changes every font to comic sans
+        function changeFont() {
+            document.body.style.fontFamily = "Comic Sans MS";
+            document.body.style.fontSize = "20px";
+        }
         
 
     </script>
 </head>
 
 <body style="background-color:rgb(34, 34, 34);">
+    <div>
+        <button onclick="changeFont()" style="font-family: Comic Sans MS;" class="FontButton">Comic Sans</button>
+    </div>
     <div class="row">
         <div class="column"><iframe style="height: 600px;width:100%;border:0;" frameborder="0"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48251514.59387308!2d71.1650134567486!3d-1.2006312196172402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1688037221854!5m2!1sde!2sde"></iframe>
@@ -91,7 +100,20 @@
             margin: 10px;
             color: rgb(187, 187, 187);
         }
+
+        /* Style for FontButton */
+        .FontButton {
+            background-color: #00c50a;
+            /* Green */
+            border: none;
+            color: rgb(0, 47, 255);
+            padding: 5px 47%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 10;
+        }
     </style>
+    
     <div>
         <h2>Natural Wonders</h2>
         <button onclick="changeMap(25.00155258025394, -71.00017141259008);changeWiki('https://en.wikipedia.org/wiki/Bermuda_Triangle')">Bermuda Triangle</button>
@@ -269,6 +291,7 @@
         <button onclick="changeMapName('Sony+Pictures+Studios');changeWiki('https://en.wikipedia.org/wiki/Film_studio')">Film Studio</button>
 
     </div>
+    
 </body>
 
 </html>
