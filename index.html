@@ -18,13 +18,38 @@
             document.getElementsByTagName("iframe")[0].src = "https://www.google.com/maps/embed/v1/place?q=" + name + "&maptype=satellite&zoom=12&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
         }
 
+        //function that changes the wiki page to the one of the wonder, when a wonder is clicked
+        function changeWiki(URL) {
+            WikiFrame = document.getElementsByTagName("iframe")[1];
+            WikiFrame.src = URL;
+        }
+        
+
     </script>
 </head>
 
 <body style="background-color:rgb(34, 34, 34);">
-    <iframe style="height: 600px;width:100%;border:0;" frameborder="0"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Civilization_VI.svg/1200px-Civilization_VI.svg.png"></iframe>
+    <div class="row">
+        <div class="column"><iframe style="height: 600px;width:100%;border:0;" frameborder="0"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48251514.59387308!2d71.1650134567486!3d-1.2006312196172402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1688037221854!5m2!1sde!2sde"></iframe>
+        </div>
+        <div class="column"><iframe src="https://en.wikipedia.org/wiki/Wonders_of_the_World" frameborder="0"></iframe></div>
+    </div>
+
+
     <style>
+        /* puts columns next to each other */
+        .row {
+            display: flex;
+        }
+
+        /* creates the columns */
+        .column {
+            flex: 50%;
+            padding: 3px;
+        }
+        
+
         /* Style for iframe*/
         iframe {
             width: 100%;
@@ -42,7 +67,7 @@
             text-align: center;
             text-decoration: none;
             /* display: inline-block; */
-            font-size: 16px;
+            font-size: 14px;
             margin: 4px 2px;
             cursor: pointer;
         }
@@ -69,178 +94,179 @@
     </style>
     <div>
         <h2>Natural Wonders</h2>
-        <button onclick="changeMap(25.00155258025394, -71.00017141259008)">Bermuda Triangle</button>
-        <button onclick="changeMap(9.821481957180476, 124.13773873259072)">Chocolate Hills</button>
-        <button onclick="changeMap(51.134331069925004, 1.3565040554945673)">Cliffs of Dover</button>
-        <button onclick="changeMap(42.9420047804834, -122.11283304068272)">Crater Lake</button>
-        <button onclick="changeMap(31.54459206526022, 35.47793859085789)">Dead Sea</button>
-        <button onclick="changeMap(38.74417556603472, -109.49962423144535)">Delicate Arch</button>
-        <button onclick="changeMap(21.119808821760888, -11.395772034965692)">Eye of the Sahara</button>
-        <button onclick="changeMap(63.63367714353559, -19.60778093330481)">Eyjafjallajökull</button>
-        <button onclick="changeMap(29.91231463958587, -81.31551661618307)">Fountain of Youth</button>
-        <button onclick="changeMap(-0.2949704571144897, -90.46190218516112)">Galápagos Islands</button>
-        <button onclick="changeMap(55.24104502459758, -6.511411972209539)">Giant's Causeway</button>
-        <button onclick="changeMap(40.09865084843784, 49.38260473273113)">Gobustan</button>
-        <button onclick="changeMap(-14.009993700642948, 144.5115373238277)">Great Barrier Reef</button>
-        <button onclick="changeMap(20.862569026859866, 107.06106648949509)">Hạ Long Bay</button>
-        <button onclick="changeMap(20.661153274648438, -88.55052100062134)">Ik-Kil</button>
-        <button onclick="changeMap(14.836909325646452, -17.23093047681551)">Lake Retba</button>
-        <button onclick="changeMap(59.0091578799531, 6.337302976145341)">Lysefjord</button>
-        <button onclick="changeMap(44.58921206928512, -104.69847010853724)">Mato Tipila</button>
-        <button onclick="changeMap(45.977464339641045, 7.6581088933536465)">Matterhorn</button>
-        <button onclick="changeMap(27.98940561190283, 86.92463200527753)">Mount Everest</button>
-        <button onclick="changeMap(-3.040736065835704, 37.356275375645765)">Mount Kilimanjaro</button>
-        <button onclick="changeMap(5.133351079742027, -60.758634581437626)">Mount Roraima</button>
-        <button onclick="changeMap(40.82387279138008, 14.428562922101866)">Mount Vesuvius</button>
-        <button onclick="changeMap(37.92011855516131, 29.121377157046396)">Pamukkale</button>
-        <button onclick="changeMap(-17.715821554297953, -57.38362734017132)">Pantanal</button>
-        <button onclick="changeMap(-44.61175452963232, 167.86118559149105)">Piopiotahi</button>
-        <button onclick="changeMap(-50.93074484174456, -73.4023021688333)">Torres del Paine</button>
-        <button onclick="changeMap(-18.34873342834772, 44.717777866363015)">Tsingy de Bemaraha</button>
-        <button onclick="changeMap(50.33900776277375, 92.75707134275801)">Ubsunur Hollow</button>
-        <button onclick="changeMap(-25.350076308813023, 131.03336983711677)">Uluru</button>
-        <button onclick="changeMap(37.89093745585064, -119.56724601349013)">Yosemite</button>
-        <button onclick="changeMap(38.92395856923626, 100.13610330260614)">Zhangye Danxia</button>
+        <button onclick="changeMap(25.00155258025394, -71.00017141259008);changeWiki('https://en.wikipedia.org/wiki/Bermuda_Triangle')">Bermuda Triangle</button>
+        <button onclick="changeMap(9.821481957180476, 124.13773873259072);changeWiki('https://en.wikipedia.org/wiki/Chocolate_Hills')">Chocolate Hills</button>
+        <button onclick="changeMap(51.134331069925004, 1.3565040554945673);changeWiki('https://en.wikipedia.org/wiki/White_Cliffs_of_Dover')">Cliffs of Dover</button>
+        <button onclick="changeMap(42.9420047804834, -122.11283304068272);changeWiki('https://en.wikipedia.org/wiki/Crater_Lake')">Crater Lake</button>
+        <button onclick="changeMap(31.54459206526022, 35.47793859085789);changeWiki('https://en.wikipedia.org/wiki/Dead_Sea')">Dead Sea</button>
+        <button onclick="changeMap(38.74417556603472, -109.49962423144535);changeWiki('https://en.wikipedia.org/wiki/Delicate_Arch')">Delicate Arch</button>
+        <button onclick="changeMap(21.119808821760888, -11.395772034965692);changeWiki('https://en.wikipedia.org/wiki/Richat_Structure')">Eye of the Sahara</button>
+        <button onclick="changeMap(63.63367714353559, -19.60778093330481);changeWiki('https://en.wikipedia.org/wiki/Eyjafjallaj%C3%B6kull')">Eyjafjallajökull</button>
+        <button onclick="changeMap(29.91231463958587, -81.31551661618307);changeWiki('https://en.wikipedia.org/wiki/Fountain_of_Youth')">Fountain of Youth</button>
+        <button onclick="changeMap(-0.2949704571144897, -90.46190218516112);changeWiki('https://en.wikipedia.org/wiki/Gal%C3%A1pagos_Islands')">Galápagos Islands</button>
+        <button onclick="changeMap(55.24104502459758, -6.511411972209539);changeWiki('https://en.wikipedia.org/wiki/Giant%27s_Causeway')">Giant's Causeway</button>
+        <button onclick="changeMap(40.09865084843784, 49.38260473273113);changeWiki('https://en.wikipedia.org/wiki/Gobustan_State_Historical_and_Cultural_Reserve')">Gobustan</button>
+        <button onclick="changeMap(-14.009993700642948, 144.5115373238277);changeWiki('https://en.wikipedia.org/wiki/Great_Barrier_Reef')">Great Barrier Reef</button>
+        <button onclick="changeMap(20.862569026859866, 107.06106648949509);changeWiki('https://en.wikipedia.org/wiki/H%E1%BA%A1_Long_Bay')">Hạ Long Bay</button>
+        <button onclick="changeMap(20.661153274648438, -88.55052100062134);changeWiki('https://en.wikipedia.org/wiki/Ik_Kil')">Ik-Kil</button>
+        <button onclick="changeMap(14.836909325646452, -17.23093047681551);changeWiki('https://en.wikipedia.org/wiki/Lake_Retba')">Lake Retba</button>
+        <button onclick="changeMap(59.0091578799531, 6.337302976145341);changeWiki('https://en.wikipedia.org/wiki/Lysefjord')">Lysefjord</button>
+        <button onclick="changeMap(44.58921206928512, -104.69847010853724);changeWiki('https://en.wikipedia.org/wiki/Devils_Tower')">Mato Tipila</button>
+        <button onclick="changeMap(45.977464339641045, 7.6581088933536465);changeWiki('https://en.wikipedia.org/wiki/Matterhorn')">Matterhorn</button>
+        <button onclick="changeMap(27.98940561190283, 86.92463200527753);changeWiki('https://en.wikipedia.org/wiki/Mount_Everest')">Mount Everest</button>
+        <button onclick="changeMap(-3.040736065835704, 37.356275375645765);changeWiki('https://en.wikipedia.org/wiki/Mount_Kilimanjaro')">Mount Kilimanjaro</button>
+        <button onclick="changeMap(5.133351079742027, -60.758634581437626);changeWiki('https://en.wikipedia.org/wiki/Mount_Roraima')">Mount Roraima</button>
+        <button onclick="changeMap(40.82387279138008, 14.428562922101866);changeWiki('https://en.wikipedia.org/wiki/Mount_Vesuvius')">Mount Vesuvius</button>
+        <button onclick="changeMap(37.92011855516131, 29.121377157046396);changeWiki('https://en.wikipedia.org/wiki/Pamukkale')">Pamukkale</button>
+        <button onclick="changeMap(-17.715821554297953, -57.38362734017132);changeWiki('https://en.wikipedia.org/wiki/Pantanal')">Pantanal</button>
+        <button onclick="changeMap(-44.61175452963232, 167.86118559149105);changeWiki('https://en.wikipedia.org/wiki/Milford_Sound')">Piopiotahi</button>
+        <button onclick="changeMap(-50.93074484174456, -73.4023021688333);changeWiki('https://en.wikipedia.org/wiki/Torres_del_Paine_National_Park')">Torres del Paine</button>
+        <button onclick="changeMap(-18.34873342834772, 44.717777866363015);changeWiki('https://en.wikipedia.org/wiki/Tsingy_de_Bemaraha_National_Park')">Tsingy de Bemaraha</button>
+        <button onclick="changeMap(50.33900776277375, 92.75707134275801);changeWiki('https://en.wikipedia.org/wiki/Uvs_Lake_Basin')">Ubsunur Hollow</button>
+        <button onclick="changeMap(-25.350076308813023, 131.03336983711677);changeWiki('https://en.wikipedia.org/wiki/Uluru')">Uluru</button>
+        <button onclick="changeMap(37.89093745585064, -119.56724601349013);changeWiki('https://en.wikipedia.org/wiki/Yosemite_National_Park')">Yosemite</button>
+        <button onclick="changeMap(38.92395856923626, 100.13610330260614);changeWiki('https://en.wikipedia.org/wiki/Zhangye_National_Geopark')">Zhangye Danxia</button>
     </div>
     <div>
         <h2>Built Wonders</h2>
-        <button onclick="changeMapWonder(37.17800894963899, -3.588118976680944)">Alhambra</button>
-        <button onclick="changeMapWonder(-84.99998969556408, 0.0007638571948332335)">Amundsen-Scott Research Station</button>
-        <button onclick="changeMapWonder(13.412750255003969, 103.8669784198946)">Angkor Wat</button>
-        <button onclick="changeMapWonder(29.935397414591286, 52.88937668472145)">Apadana</button>
-        <button onclick="changeMapWonder(51.500876413111925, -0.1245226652777242)">Big Ben</button>
-        <button onclick="changeMapWonder(45.51404282837772, -73.53153130247888)">Biosphère</button>
-        <button onclick="changeMapWonder(55.760018304612984, 37.61909989265641)">Bolshoi Theatre</button>
-        <button onclick="changeMapWonder(40.75957314321901, -73.98514066948836)">Broadway</button>
-        <button onclick="changeMapWonder(37.38379041807638, -5.991888389882101)">Casa de Contratación</button>
-        <button onclick="changeMapWonder(20.68430071152361, -88.56782060980908)">Chichen Itza</button>
-        <button onclick="changeMapWonder(41.89022373299961, 12.49224263632533)">Colosseum</button>
-        <button onclick="changeMapWonder(36.451131194979126, 28.226675347081592)">Colossus</button>
-        <button onclick="changeMapWonder(-22.95180606953592, -43.21046656488267)">Cristo Redentor</button>
-        <button onclick="changeMapWonder(48.858516951928024, 2.294636711405466)">Eiffel Tower</button>
-        <button onclick="changeMapWonder(-22.91192083598482, -43.2301952396328)">Estádio do Maracanã</button>
-        <button onclick="changeMapWonder(32.53646044373487, 44.42101258690549)">Etemenanki</button>
-        <button onclick="changeMapWonder(39.91567727416376, 116.39078785175347)">Forbidden City</button>
-        <button onclick="changeMapWonder(37.82004178516482, -122.47854603503055)">Golden Gate Bridge</button>
-        <button onclick="changeMapWonder(27.325331591999433, 68.13266728201927)">Great Bath</button>
-        <button onclick="changeMapWonder(31.208959576690923, 29.90911154391716)">Great Library</button>
-        <button onclick="changeMapWonder(31.214222974272964, 29.891314856912196)">Great Lighthouse</button>
-        <button onclick="changeMapWonder(-20.26729762239418, 30.93369869266368)">Great Zimbabwe</button>
-        <button onclick="changeMapWonder(51.17896937885732, -1.826204266303228)">Hagia Sophia</button>
-        <button onclick="changeMapWonder(33.79950572994778, 43.641650619540584)">Hanging Gardens</button>
-        <button onclick="changeMapWonder(59.9400159724007, 30.314497128906556)">Hermitage</button>
-        <button onclick="changeMapWonder(19.451468590217907, -99.13720950720511)">Huey Teocalli</button>
-        <button onclick="changeMapWonder(18.537281054642282, 31.82827145839102)">Jebel Barkal</button>
-        <button onclick="changeMapWonder(-8.965577017584621, 39.4970411218235)">Kilwa Kisiwani</button>
-        <button onclick="changeMapWonder(35.31674176434396, 139.5361388319576)">Kotoku-in</button>
-        <button onclick="changeMapWonder(-13.226111387881659, -72.49727508792598)">Machu Picchu</button>
-        <button onclick="changeMapWonder(24.696087924183015, 84.99143096386919)">Mahabodhi Temple</button>
-        <button onclick="changeMapWonder(37.03883073703311, 27.42382573902477)">Mausoleum at Halicarnassus</button>
-        <button onclick="changeMapWonder(9.91952999686554, 78.11933508874795)">Meenakshi Temple</button>
-        <button onclick="changeMapWonder(48.636100054088026, -1.5111659519293887)">Mont St. Michel</button>
-        <button onclick="changeMapWonder(38.48241311716702, 22.500986754070574)">Oracle</button>
-        <button onclick="changeMapWonder(47.507253864991114, 19.045693623325466)">Országház</button>
-        <button onclick="changeMapWonder(51.75438266390855, -1.255065971710979)">Oxford University</button>
-        <button onclick="changeMapWonder(9.125817938232974, -79.7331952551644)">Panama Canal</button>
-        <button onclick="changeMapWonder(30.32854028840973, 35.44433708617428)">Petra</button>
-        <button onclick="changeMapWonder(29.655608745648713, 91.1185540587245)">Potala Palace</button>
-        <button onclick="changeMapWonder(29.977532669381823, 31.13241349382398)">Pyramids</button>
-        <button onclick="changeMapWonder(51.48787243293904, 7.043715068495819)">Ruhr Valley</button>
-        <button onclick="changeMapWonder(55.7525772406629, 37.62311898655258)">St. Basil's Cathedral</button>
-        <button onclick="changeMapWonder(40.69102282634898, -74.04616338455735)">Statue of Liberty</button>
-        <button onclick="changeMapWonder(37.64555452956878, 21.626093802207862)">Statue of Zeus</button>
-        <button onclick="changeMapWonder(51.17896937885732, -1.826204266303228)">Stonehenge</button>
-        <button onclick="changeMapWonder(-33.856650703783224, 151.21524305163408)">Sydney Opera House</button>
-        <button onclick="changeMapWonder(27.175371867084845, 78.04190548942665)">Taj Mahal</button>
-        <button onclick="changeMapWonder(37.949656577054476, 27.363868275849647)">Temple of Artemis</button>
-        <button onclick="changeMapWonder(34.384383897636866, 109.27829707011641)">Terracotta Army</button>
-        <button onclick="changeMapWonder(38.6917511232027, -9.215870005127082)">Torre de Belém</button>
-        <button onclick="changeMapWonder(16.775348280550666, -3.0045673280324747)">University of Sankore</button>
-        <button onclick="changeMapWonder(45.434874179637276, 12.349890844316338)">Venetian Arsenal</button>
+        <button onclick="changeMapWonder(37.17800894963899, -3.588118976680944);changeWiki('https://en.wikipedia.org/wiki/Alhambra')">Alhambra</button>
+        <button onclick="changeMapWonder(-84.99998969556408, 0.0007638571948332335);changeWiki('https://en.wikipedia.org/wiki/Amundsen%E2%80%93Scott_South_Pole_Station')">Amundsen-Scott Research
+            Station</button>
+        <button onclick="changeMapWonder(13.412750255003969, 103.8669784198946);changeWiki('https://en.wikipedia.org/wiki/Angkor_Wat')">Angkor Wat</button>
+        <button onclick="changeMapWonder(29.935397414591286, 52.88937668472145);changeWiki('http://en.wikipedia.org/wiki/Apadana')">Apadana</button>
+        <button onclick="changeMapWonder(51.500876413111925, -0.1245226652777242);changeWiki('https://en.wikipedia.org/wiki/Big_Ben')">Big Ben</button>
+        <button onclick="changeMapWonder(45.51404282837772, -73.53153130247888);changeWiki('https://en.wikipedia.org/wiki/Montreal_Biosphere')">Biosphère</button>
+        <button onclick="changeMapWonder(55.760018304612984, 37.61909989265641);changeWiki('https://en.wikipedia.org/wiki/Bolshoi_Theatre')">Bolshoi Theatre</button>
+        <button onclick="changeMapWonder(40.75957314321901, -73.98514066948836);changeWiki('https://en.wikipedia.org/wiki/Broadway_(Manhattan)')">Broadway</button>
+        <button onclick="changeMapWonder(37.38379041807638, -5.991888389882101);changeWiki('https://en.wikipedia.org/wiki/Casa_de_Contrataci%C3%B3n')">Casa de Contratación</button>
+        <button onclick="changeMapWonder(20.68430071152361, -88.56782060980908);changeWiki('https://en.wikipedia.org/wiki/Chichen_Itza')">Chichen Itza</button>
+        <button onclick="changeMapWonder(41.89022373299961, 12.49224263632533);changeWiki('https://en.wikipedia.org/wiki/Colosseum')">Colosseum</button>
+        <button onclick="changeMapWonder(36.451131194979126, 28.226675347081592);changeWiki('https://en.wikipedia.org/wiki/Colossus_of_Rhodes')">Colossus</button>
+        <button onclick="changeMapWonder(-22.95180606953592, -43.21046656488267);changeWiki('https://en.wikipedia.org/wiki/Christ_the_Redeemer_(statue)')">Cristo Redentor</button>
+        <button onclick="changeMapWonder(48.858516951928024, 2.294636711405466);changeWiki('https://en.wikipedia.org/wiki/Eiffel_Tower')">Eiffel Tower</button>
+        <button onclick="changeMapWonder(-22.91192083598482, -43.2301952396328);changeWiki('https://en.wikipedia.org/wiki/Maracan%C3%A3_Stadium')">Estádio do Maracanã</button>
+        <button onclick="changeMapWonder(32.53646044373487, 44.42101258690549);changeWiki('https://en.wikipedia.org/wiki/Etemenanki')">Etemenanki</button>
+        <button onclick="changeMapWonder(39.91567727416376, 116.39078785175347);changeWiki('https://en.wikipedia.org/wiki/Forbidden_City')">Forbidden City</button>
+        <button onclick="changeMapWonder(37.82004178516482, -122.47854603503055);changeWiki('https://en.wikipedia.org/wiki/Golden_Gate_Bridge')">Golden Gate Bridge</button>
+        <button onclick="changeMapWonder(27.325331591999433, 68.13266728201927);changeWiki('https://en.wikipedia.org/wiki/Great_Bath')">Great Bath</button>
+        <button onclick="changeMapWonder(31.208959576690923, 29.90911154391716);changeWiki('https://en.wikipedia.org/wiki/Library_of_Alexandria')">Great Library</button>
+        <button onclick="changeMapWonder(31.214222974272964, 29.891314856912196);changeWiki('https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria')">Great Lighthouse</button>
+        <button onclick="changeMapWonder(-20.26729762239418, 30.93369869266368);changeWiki('https://en.wikipedia.org/wiki/Great_Zimbabwe')">Great Zimbabwe</button>
+        <button onclick="changeMapWonder(41.00870647186573, 28.98013518035212);changeWiki('https://en.wikipedia.org/wiki/Hagia_Sophia')">Hagia Sophia</button>
+        <button onclick="changeMapWonder(33.79950572994778, 43.641650619540584);changeWiki('https://en.wikipedia.org/wiki/Hanging_Gardens_of_Babylon')">Hanging Gardens</button>
+        <button onclick="changeMapWonder(59.9400159724007, 30.314497128906556);changeWiki('https://en.wikipedia.org/wiki/Hermitage_Museum')">Hermitage</button>
+        <button onclick="changeMapWonder(19.451468590217907, -99.13720950720511);changeWiki('https://en.wikipedia.org/wiki/Templo_Mayor')">Huey Teocalli</button>
+        <button onclick="changeMapWonder(18.537281054642282, 31.82827145839102);changeWiki('https://en.wikipedia.org/wiki/Jebel_Barkal')">Jebel Barkal</button>
+        <button onclick="changeMapWonder(-8.965577017584621, 39.4970411218235);changeWiki('https://en.wikipedia.org/wiki/Kilwa_Kisiwani')">Kilwa Kisiwani</button>
+        <button onclick="changeMapWonder(35.31674176434396, 139.5361388319576);changeWiki('https://en.wikipedia.org/wiki/K%C5%8Dtoku-in')">Kotoku-in</button>
+        <button onclick="changeMapWonder(-13.226111387881659, -72.49727508792598);changeWiki('https://en.wikipedia.org/wiki/Machu_Picchu')">Machu Picchu</button>
+        <button onclick="changeMapWonder(24.696087924183015, 84.99143096386919);changeWiki('https://en.wikipedia.org/wiki/Mahabodhi_Temple')">Mahabodhi Temple</button>
+        <button onclick="changeMapWonder(37.03883073703311, 27.42382573902477);changeWiki('https://en.wikipedia.org/wiki/Mausoleum_at_Halicarnassus')">Mausoleum at Halicarnassus</button>
+        <button onclick="changeMapWonder(9.91952999686554, 78.11933508874795);changeWiki('https://en.wikipedia.org/wiki/Meenakshi_Temple')">Meenakshi Temple</button>
+        <button onclick="changeMapWonder(48.636100054088026, -1.5111659519293887);changeWiki('https://en.wikipedia.org/wiki/Mont-Saint-Michel')">Mont St. Michel</button>
+        <button onclick="changeMapWonder(38.48241311716702, 22.500986754070574);changeWiki('https://en.wikipedia.org/wiki/Pythia')">Oracle</button>
+        <button onclick="changeMapWonder(47.507253864991114, 19.045693623325466);changeWiki('https://en.wikipedia.org/wiki/Hungarian_Parliament_Building')">Országház</button>
+        <button onclick="changeMapWonder(51.75438266390855, -1.255065971710979);changeWiki('https://en.wikipedia.org/wiki/University_of_Oxford')">Oxford University</button>
+        <button onclick="changeMapWonder(9.125817938232974, -79.7331952551644);changeWiki('https://en.wikipedia.org/wiki/Panama_Canal')">Panama Canal</button>
+        <button onclick="changeMapWonder(30.32854028840973, 35.44433708617428);changeWiki('https://en.wikipedia.org/wiki/Petra')">Petra</button>
+        <button onclick="changeMapWonder(29.655608745648713, 91.1185540587245);changeWiki('https://en.wikipedia.org/wiki/Potala_Palace')">Potala Palace</button>
+        <button onclick="changeMapWonder(29.977532669381823, 31.13241349382398);changeWiki('https://en.wikipedia.org/wiki/Egyptian_pyramids')">Pyramids</button>
+        <button onclick="changeMapWonder(51.48787243293904, 7.043715068495819);changeWiki('https://en.wikipedia.org/wiki/Ruhr')">Ruhr Valley</button>
+        <button onclick="changeMapWonder(55.7525772406629, 37.62311898655258);changeWiki('https://en.wikipedia.org/wiki/Saint_Basil%27s_Cathedral')">St. Basil's Cathedral</button>
+        <button onclick="changeMapWonder(40.69102282634898, -74.04616338455735);changeWiki('https://en.wikipedia.org/wiki/Statue_of_Liberty')">Statue of Liberty</button>
+        <button onclick="changeMapWonder(37.64555452956878, 21.626093802207862);changeWiki('https://en.wikipedia.org/wiki/Statue_of_Zeus_at_Olympia')">Statue of Zeus</button>
+        <button onclick="changeMapWonder(51.17896937885732, -1.826204266303228);changeWiki('https://en.wikipedia.org/wiki/Stonehenge')">Stonehenge</button>
+        <button onclick="changeMapWonder(-33.856650703783224, 151.21524305163408);changeWiki('https://en.wikipedia.org/wiki/Sydney_Opera_House')">Sydney Opera House</button>
+        <button onclick="changeMapWonder(27.175371867084845, 78.04190548942665);changeWiki('https://en.wikipedia.org/wiki/Taj_Mahal')">Taj Mahal</button>
+        <button onclick="changeMapWonder(37.949656577054476, 27.363868275849647);changeWiki('https://en.wikipedia.org/wiki/Temple_of_Artemis')">Temple of Artemis</button>
+        <button onclick="changeMapWonder(34.384383897636866, 109.27829707011641);changeWiki('https://en.wikipedia.org/wiki/Terracotta_Army')">Terracotta Army</button>
+        <button onclick="changeMapWonder(38.6917511232027, -9.215870005127082);changeWiki('https://en.wikipedia.org/wiki/Bel%C3%A9m_Tower')">Torre de Belém</button>
+        <button onclick="changeMapWonder(16.775348280550666, -3.0045673280324747);changeWiki('https://en.wikipedia.org/wiki/Sankore_Madrasah')">University of Sankore</button>
+        <button onclick="changeMapWonder(45.434874179637276, 12.349890844316338);changeWiki('https://en.wikipedia.org/wiki/Venetian_Arsenal')">Venetian Arsenal</button>
     </div>
     <div>
         <h2>City states</h2>
         <!-- Names of all City States:
             Akkad Amsterdam Anshan Antananarivo Antioch Armagh Auckland Ayutthaya Babylon Bandar+Brunei Bologna Brussels Buenos+Aires Caguana Cahokia Cardiff Carthage Chinguetti Fez Geneva Granada Hattusa Hong+Kong Hunza Jakarta Jerusalem Johannesburg Kabul Kandy Kumasi La+Venta Lahore Lisbon Mexico+City Mitla Mogadishu Mohenjo-Daro Muscat Nalanda Nan+Madol Nazca Ngazargamu Palenque Preslav Rapa+Nui Samarkand Seoul Singapore Stockholm Taruga Toronto Valletta Vatican+City Venice Vilnius Wolin Yerevan Zanzibar
         -->
-        <button onclick="changeMap(33.29808411989662, 44.10993879847643)">Akkad</button>
-        <button onclick="changeMapName('Amsterdam')">Amsterdam</button>
-        <button onclick="changeMapName('Anshan')">Anshan</button>
-        <button onclick="changeMapName('Antananarivo')">Antananarivo</button>
-        <button onclick="changeMapName('Antioch')">Antioch</button>
-        <button onclick="changeMapName('Armagh')">Armagh</button>
-        <button onclick="changeMapName('Auckland')">Auckland</button>
-        <button onclick="changeMapName('Ayutthaya,Thailand')">Ayutthaya</button>
-        <button onclick="changeMapName('Babylon,Iraq')">Babylon</button>
-        <button onclick="changeMapName('Bandar+Brunei')">Bandar Brunei</button>
-        <button onclick="changeMapName('Bologna')">Bologna</button>
-        <button onclick="changeMapName('Brussels')">Brussels</button>
-        <button onclick="changeMapName('Buenos+Aires')">Buenos Aires</button>
-        <button onclick="changeMapName('Caguana')">Caguana</button>
-        <button onclick="changeMapName('Cahokia')">Cahokia</button>
-        <button onclick="changeMapName('Cardiff')">Cardiff</button>
-        <button onclick="changeMapName('Carthage')">Carthage</button>
-        <button onclick="changeMapName('Chinguetti')">Chinguetti</button>
-        <button onclick="changeMapName('Fez,Morocco')">Fez</button>
-        <button onclick="changeMapName('Geneva')">Geneva</button>
-        <button onclick="changeMapName('Granada')">Granada</button>
-        <button onclick="changeMapName('Hattusha')">Hattusa</button>
-        <button onclick="changeMapName('Hong+Kong')">Hong Kong</button>
-        <button onclick="changeMapName('Tunja')">Hunza</button>
-        <button onclick="changeMapName('Jakarta')">Jakarta</button>
-        <button onclick="changeMapName('Jerusalem')">Jerusalem</button>
-        <button onclick="changeMapName('Johannesburg')">Johannesburg</button>
-        <button onclick="changeMapName('Kabul')">Kabul</button>
-        <button onclick="changeMapName('Kandy')">Kandy</button>
-        <button onclick="changeMapName('Kumasi')">Kumasi</button>
-        <button onclick="changeMapName('Parque-Museo+La+Venta')">La Venta</button>
-        <button onclick="changeMapName('Lahore')">Lahore</button>
-        <button onclick="changeMapName('Lisbon')">Lisbon</button>
-        <button onclick="changeMapName('Mexico+City')">Mexico City</button>
-        <button onclick="changeMapName('Mitla')">Mitla</button>
-        <button onclick="changeMapName('Mogadishu')">Mogadishu</button>
-        <button onclick="changeMapName('Mohenjo-Daro')">Mohenjo-Daro</button>
-        <button onclick="changeMapName('Muscat')">Muscat</button>
-        <button onclick="changeMapName('Nalanda')">Nalanda</button>
-        <button onclick="changeMapName('Nan+Madol')">Nan Madol</button>
-        <button onclick="changeMapName('Nazca')">Nazca</button>
-        <button onclick="changeMapName('Gidimbari')">Ngazargamu</button>
-        <button onclick="changeMapName('Palenque')">Palenque</button>
-        <button onclick="changeMapName('Preslav')">Preslav</button>
-        <button onclick="changeMapName('Rapa+Nui')">Rapa Nui</button>
-        <button onclick="changeMapName('Samarkand')">Samarkand</button>
-        <button onclick="changeMapName('Seoul')">Seoul</button>
-        <button onclick="changeMapName('Singapore')">Singapore</button>
-        <button onclick="changeMapName('Stockholm')">Stockholm</button>
-        <button onclick="changeMapName('Taruga')">Taruga</button>
-        <button onclick="changeMapName('Toronto')">Toronto</button>
-        <button onclick="changeMapName('Valletta')">Valletta</button>
-        <button onclick="changeMapName('Vatican+City')">Vatican City</button>
-        <button onclick="changeMapName('Venice')">Venice</button>
-        <button onclick="changeMapName('Vilnius')">Vilnius</button>
-        <button onclick="changeMapName('Wolin')">Wolin</button>
-        <button onclick="changeMapName('Yerevan')">Yerevan</button>
-        <button onclick="changeMapName('Zanzibar,Tansania')">Zanzibar</button>
+        <button onclick="changeMap(33.29808411989662, 44.10993879847643);changeWiki('https://en.wikipedia.org/wiki/Akkad_(city)')">Akkad</button>
+        <button onclick="changeMapName('Amsterdam');changeWiki('https://en.wikipedia.org/wiki/Amsterdam')">Amsterdam</button>
+        <button onclick="changeMapName('Anshan');changeWiki('https://en.wikipedia.org/wiki/Anshan_(Persia)')">Anshan</button>
+        <button onclick="changeMapName('Antananarivo');changeWiki('https://en.wikipedia.org/wiki/Antananarivo')">Antananarivo</button>
+        <button onclick="changeMapName('Antioch');changeWiki('https://en.wikipedia.org/wiki/Antioch')">Antioch</button>
+        <button onclick="changeMapName('Armagh');changeWiki('https://en.wikipedia.org/wiki/Armagh')">Armagh</button>
+        <button onclick="changeMapName('Auckland');changeWiki('https://en.wikipedia.org/wiki/Auckland')">Auckland</button>
+        <button onclick="changeMapName('Ayutthaya,Thailand');changeWiki('https://en.wikipedia.org/wiki/Phra_Nakhon_Si_Ayutthaya_(city)')">Ayutthaya</button>
+        <button onclick="changeMapName('Babylon,Iraq');changeWiki('https://en.wikipedia.org/wiki/Babylon')">Babylon</button>
+        <button onclick="changeMapName('Bandar+Brunei');changeWiki('https://en.wikipedia.org/wiki/Bandar_Seri_Begawan')">Bandar Brunei</button>
+        <button onclick="changeMapName('Bologna');changeWiki('https://en.wikipedia.org/wiki/Bologna')">Bologna</button>
+        <button onclick="changeMapName('Brussels');changeWiki('https://en.wikipedia.org/wiki/Brussels')">Brussels</button>
+        <button onclick="changeMapName('Buenos+Aires');changeWiki('https://en.wikipedia.org/wiki/Buenos_Aires')">Buenos Aires</button>
+        <button onclick="changeMapName('Caguana');changeWiki('https://en.wikipedia.org/wiki/Caguana_Ceremonial_Ball_Courts_Site')">Caguana</button>
+        <button onclick="changeMapName('Cahokia');changeWiki('https://en.wikipedia.org/wiki/Cahokia')">Cahokia</button>
+        <button onclick="changeMapName('Cardiff');changeWiki('https://en.wikipedia.org/wiki/Cardiff')">Cardiff</button>
+        <button onclick="changeMapName('Carthage');changeWiki('https://en.wikipedia.org/wiki/Carthage')">Carthage</button>
+        <button onclick="changeMapName('Chinguetti');changeWiki('https://en.wikipedia.org/wiki/Chinguetti')">Chinguetti</button>
+        <button onclick="changeMapName('Fez,Morocco');changeWiki('https://en.wikipedia.org/wiki/Fez,_Morocco')">Fez</button>
+        <button onclick="changeMapName('Geneva');changeWiki('https://en.wikipedia.org/wiki/Geneva')">Geneva</button>
+        <button onclick="changeMapName('Granada');changeWiki('https://en.wikipedia.org/wiki/Granada')">Granada</button>
+        <button onclick="changeMapName('Hattusha');changeWiki('https://en.wikipedia.org/wiki/Hattusa')">Hattusa</button>
+        <button onclick="changeMapName('Hong+Kong');changeWiki('https://en.wikipedia.org/wiki/Hong_Kong')">Hong Kong</button>
+        <button onclick="changeMapName('Tunja');changeWiki('https://en.wikipedia.org/wiki/Tunja')">Hunza</button>
+        <button onclick="changeMapName('Jakarta');changeWiki('https://en.wikipedia.org/wiki/Jakarta')">Jakarta</button>
+        <button onclick="changeMapName('Jerusalem');changeWiki('https://en.wikipedia.org/wiki/Jerusalem')">Jerusalem</button>
+        <button onclick="changeMapName('Johannesburg');changeWiki('https://en.wikipedia.org/wiki/Johannesburg')">Johannesburg</button>
+        <button onclick="changeMapName('Kabul');changeWiki('https://en.wikipedia.org/wiki/Kabul')">Kabul</button>
+        <button onclick="changeMapName('Kandy');changeWiki('https://en.wikipedia.org/wiki/Kandy')">Kandy</button>
+        <button onclick="changeMapName('Kumasi');changeWiki('https://en.wikipedia.org/wiki/Kumasi')">Kumasi</button>
+        <button onclick="changeMapName('Parque-Museo+La+Venta');changeWiki('https://en.wikipedia.org/wiki/La_Venta')">La Venta</button>
+        <button onclick="changeMapName('Lahore');changeWiki('https://en.wikipedia.org/wiki/Lahore')">Lahore</button>
+        <button onclick="changeMapName('Lisbon');changeWiki('https://en.wikipedia.org/wiki/Lisbon')">Lisbon</button>
+        <button onclick="changeMapName('Mexico+City');changeWiki('https://en.wikipedia.org/wiki/Mexico_City')">Mexico City</button>
+        <button onclick="changeMapName('Mitla');changeWiki('https://en.wikipedia.org/wiki/Mitla')">Mitla</button>
+        <button onclick="changeMapName('Mogadishu');changeWiki('https://en.wikipedia.org/wiki/Mogadishu')">Mogadishu</button>
+        <button onclick="changeMapName('Mohenjo-Daro');changeWiki('https://en.wikipedia.org/wiki/Mohenjo-daro')">Mohenjo-Daro</button>
+        <button onclick="changeMapName('Muscat');changeWiki('https://en.wikipedia.org/wiki/Muscat')">Muscat</button>
+        <button onclick="changeMapName('Nalanda');changeWiki('https://en.wikipedia.org/wiki/Nalanda_mahavihara')">Nalanda</button>
+        <button onclick="changeMapName('Nan+Madol');changeWiki('https://en.wikipedia.org/wiki/Nan_Madol')">Nan Madol</button>
+        <button onclick="changeMapName('Nazca');changeWiki('https://en.wikipedia.org/wiki/Nazca_culture')">Nazca</button>
+        <button onclick="changeMapName('Gidimbari');changeWiki('https://en.wikipedia.org/wiki/Ngazargamu')">Ngazargamu</button>
+        <button onclick="changeMapName('Palenque');changeWiki('https://en.wikipedia.org/wiki/Palenque')">Palenque</button>
+        <button onclick="changeMapName('Preslav');changeWiki('https://en.wikipedia.org/wiki/Veliki_Preslav')">Preslav</button>
+        <button onclick="changeMapName('Rapa+Nui');changeWiki('https://en.wikipedia.org/wiki/Easter_Island')">Rapa Nui</button>
+        <button onclick="changeMapName('Samarkand');changeWiki('https://en.wikipedia.org/wiki/Samarkand')">Samarkand</button>
+        <button onclick="changeMapName('Seoul');changeWiki('https://en.wikipedia.org/wiki/Seoul')">Seoul</button>
+        <button onclick="changeMapName('Singapore');changeWiki('https://en.wikipedia.org/wiki/Singapore')">Singapore</button>
+        <button onclick="changeMapName('Stockholm');changeWiki('https://en.wikipedia.org/wiki/Stockholm')">Stockholm</button>
+        <button onclick="changeMapName('Taruga');changeWiki('https://en.wikipedia.org/wiki/Taruga')">Taruga</button>
+        <button onclick="changeMapName('Toronto');changeWiki('https://en.wikipedia.org/wiki/Toronto')">Toronto</button>
+        <button onclick="changeMapName('Valletta');changeWiki('https://en.wikipedia.org/wiki/Valletta')">Valletta</button>
+        <button onclick="changeMapName('Vatican+City');changeWiki('https://en.wikipedia.org/wiki/Vatican_City')">Vatican City</button>
+        <button onclick="changeMapName('Venice');changeWiki('https://en.wikipedia.org/wiki/Venice')">Venice</button>
+        <button onclick="changeMapName('Vilnius');changeWiki('https://en.wikipedia.org/wiki/Vilnius')">Vilnius</button>
+        <button onclick="changeMapName('Wolin');changeWiki('https://en.wikipedia.org/wiki/Wolin_(town)')">Wolin</button>
+        <button onclick="changeMapName('Yerevan');changeWiki('https://en.wikipedia.org/wiki/Yerevan')">Yerevan</button>
+        <button onclick="changeMapName('Zanzibar,Tansania');changeWiki('https://en.wikipedia.org/wiki/Zanzibar_City')">Zanzibar</button>
     </div>
     <div>
         <h2>Unique Buildings</h2>
         <!--
             Basilikoi+Paides Palgum Marae Ordu Tlachtli	Sukiennice Prasat Stave+Church Madrasa	Navigation+School Queen's+Bibliotheque Grand+Bazaar Tsikhe Electronics+Factory Thermal+Bath Film+Studio
         -->
-        <button onclick="changeMapName('Rotowhio+Marae')">Marae</button>
-        <button onclick="changeMapName('mongolian+museum')">Ordu</button>
-        <button onclick="changeMapName('Tlachtli')">Tlachtli</button>
-        <button onclick="changeMapName('Sukiennice')">Sukiennice</button>
-        <button onclick="changeMapName('khmer+temple+thailand')">Prasat</button>
-        <button onclick="changeMapName('Stave+Church+Borgund')">Stave Church</button>
-        <button onclick="changeMapName('Madrasa+samarkand')">Madrasa</button>
-        <button onclick="changeMapName('Escola+Superior+Náutica+Infante+Dom+Henrique')">Navigation School</button>
-        <button onclick="changeMapName('National+Library+Sweden')">Queen's Bibliotheque</button>
-        <button onclick="changeMapName('Grand+Bazaar')">Grand Bazaar</button>
-        <button onclick="changeMapName('Ananuri')">Tsikhe</button>
-        <button onclick="changeMapName('Panasoni+Smart+Factory+Solutions+Kofu+Sight')">Electronics Factory</button>
-        <button onclick="changeMapName('Budapest,Thermal+Beer+Spa,Állatkerti+körút,Hungary')">Thermal Bath</button>
-        <button onclick="changeMapName('Sony+Pictures+Studios')">Film Studio</button>
+        <button onclick="changeMapName('Rotowhio+Marae');changeWiki('https://en.wikipedia.org/wiki/Marae')">Marae</button>
+        <button onclick="changeMapName('mongolian+museum');changeWiki('https://en.wikipedia.org/wiki/Orda_(organization)')">Ordu</button>
+        <button onclick="changeMapName('Tlachtli');changeWiki('https://en.wikipedia.org/wiki/Mesoamerican_ballgame')">Tlachtli</button>
+        <button onclick="changeMapName('Sukiennice');changeWiki('https://en.wikipedia.org/wiki/Cloth_hall')">Sukiennice</button>
+        <button onclick="changeMapName('khmer+temple+thailand');changeWiki('https://en.wikipedia.org/wiki/Prasat')">Prasat</button>
+        <button onclick="changeMapName('Stave+Church+Borgund');changeWiki('https://en.wikipedia.org/wiki/Stave_church')">Stave Church</button>
+        <button onclick="changeMapName('Madrasa+samarkand');changeWiki('https://en.wikipedia.org/wiki/Madrasa')">Madrasa</button>
+        <button onclick="changeMapName('Escola+Superior+Náutica+Infante+Dom+Henrique');changeWiki('https://en.wikipedia.org/wiki/Escola_Superior_N%C3%A1utica_Infante_Dom_Henrique')">Navigation School</button>
+        <button onclick="changeMapName('National+Library+Sweden');changeWiki('https://en.wikipedia.org/wiki/National_Library_of_Sweden')">Queen's Bibliotheque</button>
+        <button onclick="changeMapName('Grand+Bazaar');changeWiki('https://en.wikipedia.org/wiki/Grand_Bazaar,_Istanbul')">Grand Bazaar</button>
+        <button onclick="changeMapName('Ananuri');changeWiki('https://en.wikipedia.org/wiki/List_of_fortifications_in_Georgia_(country)')">Tsikhe</button>
+        <button onclick="changeMapName('Panasoni+Smart+Factory+Solutions+Kofu+Sight');changeWiki('https://en.wikipedia.org/wiki/Electronics_industry_in_Japan')">Electronics Factory</button>
+        <button onclick="changeMapName('Budapest,Thermal+Beer+Spa,Állatkerti+körút,Hungary');changeWiki('https://en.wikipedia.org/wiki/Spas_in_Budapest')">Thermal Bath</button>
+        <button onclick="changeMapName('Sony+Pictures+Studios');changeWiki('https://en.wikipedia.org/wiki/Film_studio')">Film Studio</button>
 
     </div>
 </body>
