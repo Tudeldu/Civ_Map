@@ -35,9 +35,7 @@
 </head>
 
 <body style="background-color:rgb(34, 34, 34);">
-    <div>
-        <button onclick="changeFont()" style="font-family: Comic Sans MS;" class="FontButton">Comic Sans</button>
-    </div>
+    
     <div class="row">
         <div class="column"><iframe style="height: 600px;width:100%;border:0;" frameborder="0"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d48251514.59387308!2d71.1650134567486!3d-1.2006312196172402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sde!2sde!4v1688037221854!5m2!1sde!2sde"></iframe>
@@ -105,11 +103,11 @@
         .FontButton {
             background-color: #00c50a;
             /* Green */
-            border: none;
+            border: dashed;
             color: rgb(0, 47, 255);
             padding: 5px 47%;
             text-align: center;
-            text-decoration: none;
+            text-decoration: underline dotted red;
             font-size: 10;
         }
     </style>
@@ -291,7 +289,9 @@
         <button onclick="changeMapName('Sony+Pictures+Studios');changeWiki('https://en.wikipedia.org/wiki/Film_studio')">Film Studio</button>
 
     </div>
-    
+    <div>
+        <button onclick="changeFont()" style="font-family: Comic Sans MS;" class="FontButton">Comic Sans</button>
+    </div>
 </body>
 
 </html>
